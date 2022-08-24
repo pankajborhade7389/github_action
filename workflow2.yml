@@ -1,0 +1,22 @@
+name: my demo 2nd workflow
+on:
+ push: 
+  branches: ["main","master"]
+
+ workflow_dispatch:
+
+jobs:
+  demojob:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: echo Hello,welcome to demo 2nd workflow
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to demojobs,
+          echo test, and deploy your project.
+          echo welcome to multiline demo comments
